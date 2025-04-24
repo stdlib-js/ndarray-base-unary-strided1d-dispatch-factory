@@ -35,25 +35,7 @@ limitations under the License.
 
 > Create a function for applying a strided function an input ndarray.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-unary-strided1d-dispatch-factory
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
@@ -62,7 +44,7 @@ To view installation and usage instructions specific to each branch build, be su
 <!-- eslint-disable id-length -->
 
 ```javascript
-var unaryStrided1dDispatchFactory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
+import unaryStrided1dDispatchFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory@deno/mod.js';
 ```
 
 #### unaryStrided1dDispatchFactory( table, idtypes, odtypes, policy )
@@ -72,7 +54,7 @@ Returns a function for applying a strided function an input ndarray.
 <!-- eslint-disable id-length -->
 
 ```javascript
-var base = require( '@stdlib/stats-base-ndarray-cumax' );
+import base from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@deno/mod.js';
 
 var table = {
     'default': base
@@ -106,9 +88,9 @@ Applies a strided function to a provided input ndarray.
 <!-- eslint-disable id-length -->
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
-var base = require( '@stdlib/stats-base-ndarray-cumax' );
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
+import base from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@deno/mod.js';
 
 var table = {
     'default': base
@@ -145,10 +127,10 @@ By default, the function returns an ndarray having a data type determined by the
 <!-- eslint-disable id-length -->
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
-var base = require( '@stdlib/stats-base-ndarray-cumax' );
-var getDType = require( '@stdlib/ndarray-dtype' );
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
+import base from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@deno/mod.js';
+import getDType from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@deno/mod.js';
 
 var table = {
     'default': base
@@ -178,10 +160,10 @@ Applies a strided function to a provided input ndarray and assigns results to a 
 <!-- eslint-disable id-length -->
 
 ```javascript
-var base = require( '@stdlib/stats-base-ndarray-cumax' );
-var dtypes = require( '@stdlib/ndarray-dtypes' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
+import base from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@deno/mod.js';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@deno/mod.js';
 
 var idt = dtypes( 'real_and_generic' );
 var odt = idt;
@@ -252,15 +234,15 @@ The function accepts the following options:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var dcumax = require( '@stdlib/stats-base-ndarray-dcumax' );
-var scumax = require( '@stdlib/stats-base-ndarray-scumax' );
-var base = require( '@stdlib/stats-base-ndarray-cumax' );
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var dtypes = require( '@stdlib/ndarray-dtypes' );
-var dtype = require( '@stdlib/ndarray-dtype' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var ndarray = require( '@stdlib/ndarray-ctor' );
-var unaryStrided1dDispatchFactory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
+import dcumax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-dcumax@deno/mod.js';
+import scumax from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-scumax@deno/mod.js';
+import base from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@deno/mod.js';
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@deno/mod.js';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@deno/mod.js';
+import dtype from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@deno/mod.js';
+import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
+import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
+import unaryStrided1dDispatchFactory from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory@deno/mod.js';
 
 // Define the supported input and output data types:
 var idt = dtypes( 'real_and_generic' );
@@ -328,7 +310,7 @@ console.log( ndarray2array( y ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
