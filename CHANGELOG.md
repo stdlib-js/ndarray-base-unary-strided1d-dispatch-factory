@@ -32,6 +32,7 @@
 
 <details>
 
+-   [`70909a2`](https://github.com/stdlib-js/stdlib/commit/70909a23604547f4430a729bf811dcc0ee999055) - **docs:** use consistent terms _(by Athan Reines)_
 -   [`d4f8189`](https://github.com/stdlib-js/stdlib/commit/d4f8189e03d81f54c5483ffb016ca967a3888565) - **refactor:** modify dispatch table to support type signatures _(by Athan Reines)_
 -   [`db7d60b`](https://github.com/stdlib-js/stdlib/commit/db7d60b388d19ab8a4b537ec3445f3181ef270b7) - **feat:** add `ndarray/base/unary-strided1d-dispatch-factory` _(by Athan Reines)_
 
