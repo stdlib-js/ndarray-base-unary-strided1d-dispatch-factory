@@ -54,6 +54,8 @@
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
     "@stdlib/random-array-uniform": "^0.2.1",
     "@stdlib/stats-base-ndarray-cumax": "github:stdlib-js/stats-base-ndarray-cumax#main",
+    "@stdlib/stats-base-ndarray-dcumax": "github:stdlib-js/stats-base-ndarray-dcumax#main",
+    "@stdlib/stats-base-ndarray-scumax": "github:stdlib-js/stats-base-ndarray-scumax#main",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
