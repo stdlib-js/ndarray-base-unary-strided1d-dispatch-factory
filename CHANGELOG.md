@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-24)
+## Unreleased (2025-04-26)
 
 <section class="features">
 
@@ -20,6 +20,7 @@
 
 ### BREAKING CHANGES
 
+-   [`7507be0`](https://github.com/stdlib-js/stdlib/commit/7507be008cc27aa0c74770a29cd4b4507eca6745): replace policy string argument with a policy object
 -   [`d4f8189`](https://github.com/stdlib-js/stdlib/commit/d4f8189e03d81f54c5483ffb016ca967a3888565): modify dispatch table to support type signatures
 
 </section>
@@ -32,6 +33,7 @@
 
 <details>
 
+-   [`7507be0`](https://github.com/stdlib-js/stdlib/commit/7507be008cc27aa0c74770a29cd4b4507eca6745) - **refactor:** replace policy string argument with a policy object _(by Athan Reines)_
 -   [`5fb7055`](https://github.com/stdlib-js/stdlib/commit/5fb70551ba3e223bbb24ca2166b81dbc4545786a) - **docs:** fix copy _(by Athan Reines)_
 -   [`a99a19f`](https://github.com/stdlib-js/stdlib/commit/a99a19f59967df65f528167c8754cad9aed4c6ae) - **docs:** fix copy _(by Athan Reines)_
 -   [`a520c93`](https://github.com/stdlib-js/stdlib/commit/a520c939390ec43739c53df7f7720a36cf9a56a5) - **docs:** update copy _(by Athan Reines)_
