@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-26)
+## Unreleased (2025-04-27)
 
 <section class="features">
 
 ### Features
 
+-   [`b087d7b`](https://github.com/stdlib-js/stdlib/commit/b087d7b801c7cae56cb39587b295fb7433638405) - add support for enforcing traversal order
 -   [`db7d60b`](https://github.com/stdlib-js/stdlib/commit/db7d60b388d19ab8a4b537ec3445f3181ef270b7) - add `ndarray/base/unary-strided1d-dispatch-factory`
 
 </section>
@@ -33,6 +34,7 @@
 
 <details>
 
+-   [`b087d7b`](https://github.com/stdlib-js/stdlib/commit/b087d7b801c7cae56cb39587b295fb7433638405) - **feat:** add support for enforcing traversal order _(by Athan Reines)_
 -   [`7507be0`](https://github.com/stdlib-js/stdlib/commit/7507be008cc27aa0c74770a29cd4b4507eca6745) - **refactor:** replace policy string argument with a policy object _(by Athan Reines)_
 -   [`5fb7055`](https://github.com/stdlib-js/stdlib/commit/5fb70551ba3e223bbb24ca2166b81dbc4545786a) - **docs:** fix copy _(by Athan Reines)_
 -   [`a99a19f`](https://github.com/stdlib-js/stdlib/commit/a99a19f59967df65f528167c8754cad9aed4c6ae) - **docs:** fix copy _(by Athan Reines)_

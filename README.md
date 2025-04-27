@@ -65,7 +65,7 @@ To view installation and usage instructions specific to each branch build, be su
 var unaryStrided1dDispatchFactory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
 ```
 
-#### unaryStrided1dDispatchFactory( table, idtypes, odtypes, policies )
+#### unaryStrided1dDispatchFactory( table, idtypes, odtypes, policies\[, options] )
 
 Returns a function for applying a strided function an input ndarray.
 
@@ -106,6 +106,12 @@ The function has the following parameters:
 
     -   **output**: output data type [policy][@stdlib/ndarray/output-dtype-policies].
     -   **casting**: input ndarray casting [policy][@stdlib/ndarray/input-casting-policies].
+
+-   **options**: function options (_optional_).
+
+The function supports the following options:
+
+-   **strictTraversalOrder**: boolean specifying whether the order of element traversal must match the memory layout order of an input ndarray. Default: `false`.
 
 #### unary( x\[, ...args]\[, options] )
 
