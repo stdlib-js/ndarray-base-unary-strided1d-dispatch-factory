@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-18)
+## Unreleased (2026-01-26)
 
 <section class="features">
 
@@ -34,6 +34,7 @@
 
 <details>
 
+-   [`47088cc`](https://github.com/stdlib-js/stdlib/commit/47088cc299d84289a904dd2e7d2cdf0aee9057aa) - **docs:** fix TSDoc comments example code and return annotation values _(by Philipp Burckhardt)_
 -   [`f709450`](https://github.com/stdlib-js/stdlib/commit/f70945029cc35797e0af5ec1de2fda369b5c222a) - **docs:** correct grammar in JSDoc comments _(by Philipp Burckhardt)_
 -   [`626b52b`](https://github.com/stdlib-js/stdlib/commit/626b52bc5f30d90237d82055095814a5f6e75546) - **docs:** remove comma _(by Athan Reines)_
 -   [`0b84dbb`](https://github.com/stdlib-js/stdlib/commit/0b84dbba9791d2033079cecb12a33f9e66640e54) - **docs:** update description _(by Athan Reines)_
