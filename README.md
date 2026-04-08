@@ -35,7 +35,25 @@ limitations under the License.
 
 > Create a function for applying a strided function an input ndarray.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-base-unary-strided1d-dispatch-factory
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
@@ -43,32 +61,8 @@ limitations under the License.
 
 <!-- eslint-disable id-length -->
 
-To use in Observable,
-
 ```javascript
-unaryStrided1dDispatchFactory = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var unaryStrided1dDispatchFactory = require( 'path/to/vendor/umd/ndarray-base-unary-strided1d-dispatch-factory/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.unaryStrided1dDispatchFactory;
-})();
-</script>
+var unaryStrided1dDispatchFactory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
 ```
 
 #### unaryStrided1dDispatchFactory( table, idtypes, odtypes, policies\[, options] )
@@ -126,7 +120,6 @@ Applies a strided function to a provided input ndarray.
 <!-- eslint-disable id-length -->
 
 ```javascript
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var ndarray = require( '@stdlib/ndarray-base-ctor' );
 var base = require( '@stdlib/stats-base-ndarray-cumax' );
 
@@ -146,10 +139,7 @@ var xbuf = [ -1.0, 2.0, -3.0 ];
 var x = new ndarray( 'generic', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
 
 var y = unary( x );
-// returns <ndarray>
-
-var arr = ndarray2array( y );
-// returns [ -1.0, 2.0, 2.0 ]
+// returns <ndarray>[ -1.0, 2.0, 2.0 ]
 ```
 
 The function has the following parameters:
@@ -192,7 +182,7 @@ var y = unary( x, {
 });
 // returns <ndarray>
 
-var dt = getDType( y );
+var dt = String( getDType( y ) );
 // returns 'float64'
 ```
 
@@ -205,7 +195,6 @@ Applies a strided function to a provided input ndarray and assigns results to a 
 ```javascript
 var base = require( '@stdlib/stats-base-ndarray-cumax' );
 var dtypes = require( '@stdlib/ndarray-dtypes' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
 var ndarray = require( '@stdlib/ndarray-base-ctor' );
 
 var idt = dtypes( 'real_and_generic' );
@@ -227,10 +216,7 @@ var ybuf = [ 0.0, 0.0, 0.0 ];
 var y = new ndarray( 'generic', ybuf, [ ybuf.length ], [ 1 ], 0, 'row-major' );
 
 var out = unary.assign( x, y );
-// returns <ndarray>
-
-var arr = ndarray2array( out );
-// returns [ -1.0, 2.0, 2.0 ]
+// returns <ndarray>[ -1.0, 2.0, 2.0 ]
 
 var bool = ( out === y );
 // returns true
@@ -279,21 +265,16 @@ The method accepts the following options:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-dcumax@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-scumax@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-ndarray-cumax@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtype@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var dcumax = require( '@stdlib/stats-base-ndarray-dcumax' );
+var scumax = require( '@stdlib/stats-base-ndarray-scumax' );
+var base = require( '@stdlib/stats-base-ndarray-cumax' );
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var dtypes = require( '@stdlib/ndarray-dtypes' );
+var dtype = require( '@stdlib/ndarray-dtype' );
+var ndarray2array = require( '@stdlib/ndarray-to-array' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var unaryStrided1dDispatchFactory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
 
 // Define the supported input and output data types:
 var idt = dtypes( 'real_and_generic' );
@@ -341,11 +322,6 @@ console.log( dt );
 
 // Print the results:
 console.log( ndarray2array( y ) );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -432,9 +408,9 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-unary-strided1d-dispatch-factory/main/LICENSE
 
-[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies/tree/umd
+[@stdlib/ndarray/output-dtype-policies]: https://github.com/stdlib-js/ndarray-output-dtype-policies
 
-[@stdlib/ndarray/input-casting-policies]: https://github.com/stdlib-js/ndarray-input-casting-policies/tree/umd
+[@stdlib/ndarray/input-casting-policies]: https://github.com/stdlib-js/ndarray-input-casting-policies
 
 </section>
 
