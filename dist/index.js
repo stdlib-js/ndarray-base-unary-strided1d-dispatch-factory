@@ -1,5 +1,82 @@
-"use strict";var c=function(s,a){return function(){return a||s((a={exports:{}}).exports,a),a.exports}};var p=c(function(q,f){
-var h=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),g=require('@stdlib/ndarray-base-unary-strided1d-dispatch/dist');function l(s,a,t,u,v){var e;return arguments.length>4?e=new g(s,a,t,u,v):e=new g(s,a,t,u),h(i,"assign",m),i;function i(){var n,r;for(n=[],r=0;r<arguments.length;r++)n.push(arguments[r]);return e.apply.apply(e,n)}function m(){var n,r;for(n=[],r=0;r<arguments.length;r++)n.push(arguments[r]);return e.assign.apply(e,n)}}f.exports=l
-});var o=p();module.exports=o;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Create a function for applying a strided function to a provided ndarray.
+*
+* @module @stdlib/ndarray-base-unary-strided1d-dispatch-factory
+*
+* @example
+* var base = require( '@stdlib/stats-base-ndarray-cumax' );
+* var dtypes = require( '@stdlib/ndarray-dtypes' );
+* var ndarray2array = require( '@stdlib/ndarray-to-array' );
+* var ndarray = require( '@stdlib/ndarray-base-ctor' );
+* var factory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
+*
+* var idt = dtypes( 'real_and_generic' );
+* var odt = idt;
+* var policies = {
+*     'output': 'same',
+*     'casting': 'none'
+* };
+*
+* var table = {
+*     'default': base
+* };
+* var cumax = factory( table, [ idt ], odt, policies );
+*
+* var xbuf = [ -1.0, 2.0, -3.0 ];
+* var x = new ndarray( 'generic', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
+*
+* var y = cumax( x );
+* // returns <ndarray>
+*
+* var arr = ndarray2array( y );
+* // returns [ -1.0, 2.0, 2.0 ]
+*
+* @example
+* var base = require( '@stdlib/stats-base-ndarray-cumax' );
+* var dtypes = require( '@stdlib/ndarray-dtypes' );
+* var ndarray2array = require( '@stdlib/ndarray-to-array' );
+* var ndarray = require( '@stdlib/ndarray-base-ctor' );
+* var factory = require( '@stdlib/ndarray-base-unary-strided1d-dispatch-factory' );
+*
+* var idt = dtypes( 'real_and_generic' );
+* var odt = idt;
+* var policies = {
+*     'output': 'same',
+*     'casting': 'none'
+* };
+*
+* var table = {
+*     'default': base
+* };
+* var cumax = factory( table, [ idt ], odt, policies );
+*
+* var xbuf = [ -1.0, 2.0, -3.0 ];
+* var x = new ndarray( 'generic', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
+*
+* var ybuf = [ 0.0, 0.0, 0.0 ];
+* var y = new ndarray( 'generic', ybuf, [ ybuf.length ], [ 1 ], 0, 'row-major' );
+*
+* var out = cumax.assign( x, y );
+* // returns <ndarray>
+*
+* var arr = ndarray2array( out );
+* // returns [ -1.0, 2.0, 2.0 ]
+*
+* var bool = ( out === y );
+* // returns true
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
+
+// exports: { "assign": "main.assign" }
